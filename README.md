@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is available [here](https://simotae14.github.io/monsters-rolodex/).
 
 ## Available Scripts
 
