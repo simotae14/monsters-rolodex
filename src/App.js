@@ -36,11 +36,18 @@ class App extends Component {
     })
   };
   render() {
-    const filteredMonsters = this.state.monsters.filter((monster) => monster.name.toLowerCase().includes(this.state.searchField.toLowerCase()));
+    const {
+      monsters,
+      searchField,
+    } = this.state;
+    const {
+      onSearchChange,
+    } = this;
+    const filteredMonsters = monsters.filter((monster) => monster.name.toLowerCase().includes(searchField.toLowerCase()));
     return (
       <div className="App">
         <input
-          onChange={this.onSearchChange}
+          onChange={onSearchChange}
           className='search-box'
           type='search'
           placeholder='search monsters'
