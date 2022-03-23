@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
+import CardList from './components/card-list/card-list.component';
 import './App.css';
 
 class App extends Component {
@@ -22,7 +23,7 @@ class App extends Component {
           };
         },
         () => {
-          console.log(this.state.monsters);
+          console.log(this.state);
         }
       )
     );
@@ -52,13 +53,14 @@ class App extends Component {
           type='search'
           placeholder='search monsters'
         />
-        {filteredMonsters.map(({ id, name }) => {
+        {/*filteredMonsters.map(({ id, name }) => {
           return (
             <div key={id}>
               <h1>{name}</h1>
             </div>
           )
-        })}
+        })*/}
+        <CardList />
       </div>
     );
   }
