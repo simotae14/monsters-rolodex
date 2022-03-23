@@ -21,9 +21,6 @@ class App extends Component {
           return {
             monsters: users
           };
-        },
-        () => {
-          console.log(this.state);
         }
       )
     );
@@ -53,14 +50,7 @@ class App extends Component {
           type='search'
           placeholder='search monsters'
         />
-        {/*filteredMonsters.map(({ id, name }) => {
-          return (
-            <div key={id}>
-              <h1>{name}</h1>
-            </div>
-          )
-        })*/}
-        <CardList />
+        <CardList monsters={filteredMonsters} />
       </div>
     );
   }
