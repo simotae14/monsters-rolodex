@@ -8,7 +8,7 @@ class Card extends Component {
       id,
       name,
       email,
-    } = this.props;
+    } = this.props.monster;
     return (
       <div className='card-container'>
         <img
