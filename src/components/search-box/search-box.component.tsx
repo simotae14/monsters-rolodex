@@ -1,10 +1,19 @@
-import React from 'react';
 import './search-box.styles.css';
+
+interface ISearchBoxProps {
+  className: string;
+  placeholder?: string;
+};
+
+interface ISearchBoxProps {
+  onChangeHandler: (a: string) => void
+}
+
 const SearchBox = ({
   onChangeHandler,
   className,
   placeholder,
-}) => {
+}: ISearchBoxProps) => {
   return (
     <input
       onChange={onChangeHandler}
@@ -16,3 +25,6 @@ const SearchBox = ({
 }
 
 export default SearchBox;
+const func: (a: string, b: number, c: boolean) => boolean = (a, b, c) => {
+  return true;
+}
